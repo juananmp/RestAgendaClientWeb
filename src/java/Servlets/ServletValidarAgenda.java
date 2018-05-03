@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Main;
+package Servlets;
 
+import Metodos.MetodosValidarAgenda;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -16,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author janto
  */
-public class Main extends HttpServlet {
+public class ServletValidarAgenda extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -31,54 +32,23 @@ public class Main extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-        
+            /* TODO output your page here. You may use following sample code. */
+             MetodosValidarAgenda mv = new MetodosValidarAgenda();
+            String b = mv.putXml();
+//////                        System.out.println(b);
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Main</title>");            
+            out.println("<title>Servlet ValidarDTD</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<form action='/RestAgendaClientWeb/ServletAnnadirContacto' method='POST'>");
-                out.println("<h1>Introduce nombre</h1>"+"<input type='text' name='name'>");
-                out.println("<br>");
-                out.println("<h1>Introduce email</h1>"+"<input type='text' name='email'>");
-                out.println("<br>");
-                out.println("<h1>Introduce apellido</h1>"+"<input type='number' name='telephone'>");
-                out.println("<br>");
-                out.println("<input type='submit' value='Crear Persona'>");
-            out.println("</form>");
-            out.println("<hr>");
-            
-             out.println("<form action='/RestAgendaClientWeb/ServletBuscarContacto' method='POST'>");
-                out.println("<input type='text' name='name'>");
-                out.println("<input type='submit' value='Buscar persona'>");
-            out.println("</form>");
-            out.println("<hr>");
-            
-            out.println("<form action='/RestAgendaClientWeb/ServletMostrarAgenda' method='POST'>");
-                
-                out.println("<input type='submit' value='Ver Agenda'>");
-            out.println("</form>");
-            out.println("<hr>");
-            
-             out.println("<form action='/RestAgendaClientWeb/ServletValidarAgenda' method='POST'>");
+            out.println("<h1>Servlet ValidarDTD at " + b+ "</h1>");
+            out.println("<form action='/RestAgendaClientWeb/Main' method='POST'>");
                
-                out.println("<input type='submit' value='Validar Agenda'>");
+                out.println("<input type='submit' value='Volver Página inicial'>");
             out.println("</form>");
-            out.println("<hr>");
-            
-             out.println("<form action='/RestAgendaClientWeb/ServletValidarPersona' method='POST'>");
-                out.println("<h1>Introduce nombre</h1>"+"<input type='text' name='name'>");
-                out.println("<br>");
-                out.println("<h1>Introduce email</h1>"+"<input type='text' name='email'>");
-                out.println("<br>");
-                out.println("<h1>Introduce apellido</h1>"+"<input type='number' name='telephone'>");
-                out.println("<br>");
-                out.println("<input type='submit' value='Validar Persona'>");
-            out.println("</form>");
-            out.println("<hr>");
-            
+            out.println("<h1>Servlet ValidarDTD at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }

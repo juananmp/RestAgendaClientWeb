@@ -16,6 +16,14 @@
         <servlet-name>ServletMostrarAgenda</servlet-name>
         <servlet-class>Servlets.ServletMostrarAgenda</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletValidarAgenda</servlet-name>
+        <servlet-class>Servlets.ServletValidarAgenda</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletValidarPersona</servlet-name>
+        <servlet-class>Servlets.ServletValidarPersona</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Main</servlet-name>
         <url-pattern>/Main</url-pattern>
@@ -31,6 +39,14 @@
     <servlet-mapping>
         <servlet-name>ServletMostrarAgenda</servlet-name>
         <url-pattern>/ServletMostrarAgenda</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletValidarAgenda</servlet-name>
+        <url-pattern>/ServletValidarAgenda</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletValidarPersona</servlet-name>
+        <url-pattern>/ServletValidarPersona</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -54,7 +54,7 @@ public class ServletAnnadirContacto extends HttpServlet {
         p.setName(name);
         p.setEmail(email);
         p.setTelephone(telephone);
-          out.println("<h1>El usuario: " + name+"Se ha creado correctamente"+ "</h1>");
+          out.println("<h1>El usuario: " + name+ " Se ha creado correctamente"+ "</h1>");
         
       mp.postXml(p, PersonaObj.class);
                 out.println("<input type='submit' value='Volver Página inicial'>");
