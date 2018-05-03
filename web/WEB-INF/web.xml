@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>Main</servlet-name>
+        <servlet-class>Main.Main</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletAnnadirContacto</servlet-name>
+        <servlet-class>Servlets.ServletAnnadirContacto</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletBuscarContacto</servlet-name>
+        <servlet-class>Servlets.ServletBuscarContacto</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletMostrarAgenda</servlet-name>
+        <servlet-class>Servlets.ServletMostrarAgenda</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Main</servlet-name>
+        <url-pattern>/Main</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletAnnadirContacto</servlet-name>
+        <url-pattern>/ServletAnnadirContacto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletBuscarContacto</servlet-name>
+        <url-pattern>/ServletBuscarContacto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletMostrarAgenda</servlet-name>
+        <url-pattern>/ServletMostrarAgenda</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
